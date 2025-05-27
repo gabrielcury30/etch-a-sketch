@@ -1,1 +1,2 @@
 # etch-a-sketch
+Este projeto foi desenvolvido durante o curso de desenvolvimento web do programa open-source The Odin Project. Ele consiste em algo entre um bloco de notas e um Etch-A-Sketch. O intuito desse projeto era exercitar minhas habilidades de manipulação de DOM.
