@@ -4,8 +4,16 @@ const quantidadeDivs = 256;
 const criarDivs = (quantidadeDivs) => {
     const divPai = document.querySelector(".conteiner");
 
+    const grade = Math.sqrt(quantidadeDivs);
+
+    const larguraDiv = `${100 / grade}%`;
+    const alturaDiv = `${100 / grade}%`;
+
     for (let i = 0; i < quantidadeDivs; i++) {
         const div = document.createElement("div");
+
+        div.style.width = larguraDiv;
+        div.style.height = alturaDiv;
 
         divPai.appendChild(div);
     };
