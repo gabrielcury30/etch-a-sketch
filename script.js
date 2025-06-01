@@ -12,6 +12,8 @@ const criarDivs = (quantidadeDivs) => {
     for (let i = 0; i < quantidadeDivs; i++) {
         const div = document.createElement("div");
 
+        div.classList.add("square");
+
         div.style.width = larguraDiv;
         div.style.height = alturaDiv;
 
@@ -20,3 +22,11 @@ const criarDivs = (quantidadeDivs) => {
 };
 
 criarDivs(quantidadeDivs);
+
+const squareList = document.querySelectorAll(".square");
+
+squareList.forEach(square => {
+    square.addEventListener("mouseover", () => {
+        square.style.backgroundColor = "red";
+    });
+});
