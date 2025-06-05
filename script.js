@@ -44,14 +44,14 @@ const corpoDocumento = document.querySelector("body");
 corpoDocumento.prepend(botaoMudarGrade);
 
 botaoMudarGrade.addEventListener("click", () => {
-    tamanhoGrade = prompt("Digite o tamanho da grade NxN");
+    tamanhoGrade = prompt("Digite o tamanho da grade (NxN) entre 0 e 100.");
 
     if (tamanhoGrade !== null) {
         tamanhoGrade = tamanhoGrade.trim();
     };
 
-    while (isNaN(tamanhoGrade) || tamanhoGrade === "") {
-        tamanhoGrade = prompt("Digite um tamanho de grade válida. Somente números.");
+    while (isNaN(tamanhoGrade) || tamanhoGrade === "" || tamanhoGrade > 100 || tamanhoGrade < 0) {
+        tamanhoGrade = prompt("Digite um tamanho de grade válida! Apenas números entre 0 e 100.");
 
         if (tamanhoGrade !== null) {
             tamanhoGrade = tamanhoGrade.trim();
