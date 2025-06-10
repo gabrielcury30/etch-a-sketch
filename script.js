@@ -26,9 +26,20 @@ criarDivs(tamanhoGrade, quantidadeDivs);
 const pintarQuadrados = () => {
     const squareList = document.querySelectorAll(".square");
 
+    let valorMinimo = 0;
+    let valorMaximo = 255;
+    
+    let vermelho;
+    let verde;
+    let azul;
+
     squareList.forEach(square => {
         square.addEventListener("mouseover", () => {
-            square.style.backgroundColor = "red";
+            vermelho = Math.floor(Math.random() * (valorMaximo - valorMinimo + 1) + valorMinimo);
+            verde = Math.floor(Math.random() * (valorMaximo - valorMinimo + 1) + valorMinimo);
+            azul = Math.floor(Math.random() * (valorMaximo - valorMinimo + 1) + valorMinimo);
+            
+            square.style.backgroundColor = `rgb(${vermelho}, ${verde}, ${azul})`;
         });
     });
 };
