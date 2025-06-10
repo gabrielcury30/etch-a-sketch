@@ -51,8 +51,13 @@ const botaoMudarGrade = document.createElement("button");
 botaoMudarGrade.classList.add(".botaoMudarGrade");
 botaoMudarGrade.textContent = "Tamanho da Grade";
 
+const titulo = document.createElement("h1");
+titulo.classList.add(".titulo");
+titulo.textContent = "Etch a Sketch";
+
 const corpoDocumento = document.querySelector("body");
 corpoDocumento.prepend(botaoMudarGrade);
+corpoDocumento.prepend(titulo);
 
 botaoMudarGrade.addEventListener("click", () => {
     tamanhoGrade = prompt("Digite o tamanho da grade (NxN) entre 0 e 100.");
